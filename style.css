@@ -41,3 +41,12 @@ body {
 .contact-avatar {
   object-fit: cover; /* Cover the area without distortion */
 }
+
+/* Style for the expand/collapse icon */
+.expand-icon {
+  font-weight: bold;
+  font-size: 1.2em; /* Make +/- slightly larger */
+  width: 24px; /* Ensure consistent width */
+  text-align: center;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
