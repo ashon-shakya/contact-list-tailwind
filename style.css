@@ -31,3 +31,13 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Basic transition for background color */
+.contact-item-summary {
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* Ensure images don't break layout if they fail to load */
+.contact-avatar {
+  object-fit: cover; /* Cover the area without distortion */
+}
