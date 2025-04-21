@@ -1,4 +1,5 @@
-const apiUrl = "https://randomuser.me/api/?results=2";
+const contactNumber = 10;
+const apiUrl = `https://randomuser.me/api/?results=${contactNumber}`;
 
 const fetchRandomUserData = async () => {
   try {
@@ -32,9 +33,10 @@ const fetchRandomUserData = async () => {
                       <p class="text-sm text-gray-600 truncate">${user.cell}</p>
                     </div>
                   </div>
+                  <span class="expand-icon text-gray-500 ml-3">+</span>
                 </div>
                 <div
-                  class="contact-item-details p-4 border-t border-gray-200 bg-gray-50"
+                  class="contact-item-details hidden p-4 border-t border-gray-200 bg-gray-50"
                 >
                   <p class="text-sm font-medium text-gray-700 mb-1">
                     Phone:
@@ -56,6 +58,31 @@ const fetchRandomUserData = async () => {
 
     const contactListUl = document.getElementById("contact-list-ul");
     contactListUl.innerHTML = contactList;
+
+    // Click event to show and hide contact details
+
+    const contactSummaries = document.querySelectorAll(".contact-item-summary");
+
+    contactSummaries.forEach((summary) => {
+      summary.addEventListener("click", () => {
+        // Assuming detail section is sibling
+        const details = summary.nextElementSibling;
+        // Find the icon within this summary
+        const icon = summary.querySelector(".expand-icon");
+
+        if (details && details.classList.contains("contact-item-details")) {
+          // Toggle the 'hidden' class on the details section
+          details.classList.toggle("hidden");
+
+          // Change the icon text based on visibility
+          icon.textContent = details.classList.contains("hidden") ? "+" : "-";
+        } else {
+          console.error(
+            "Could not find the details section for this contact item."
+          );
+        }
+      });
+    });
   } catch (err) {
     console.log(err);
   }
