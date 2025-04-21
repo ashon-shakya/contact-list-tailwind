@@ -75,7 +75,7 @@ const fetchRandomUserData = async () => {
           details.classList.toggle("hidden");
 
           // Change the icon text based on visibility
-          icon.textContent = details.classList.contains("hidden") ? "+" : "-";
+          icon.innerText = details.classList.contains("hidden") ? "+" : "-";
         } else {
           console.error(
             "Could not find the details section for this contact item."

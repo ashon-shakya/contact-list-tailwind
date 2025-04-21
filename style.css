@@ -6,6 +6,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url();
 }
 .phone-notch {
   width: 40%;
@@ -49,4 +50,29 @@ body {
   width: 24px; /* Ensure consistent width */
   text-align: center;
   flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px; /* Vertical scroll */
+  height: 6px; /* Horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Optional: track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scroll thumb */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Hover effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #888 transparent; /* thumb and track color */
 }
