@@ -1,89 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact List - Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body
-    class="flex items-center justify-center min-h-screen p-4 bg-[url('/bg.jpg')] bg-center bg-cover bg-no-repeat"
-  >
-    <div
-      class="w-full max-w-sm h-[700px] bg-gray-800 rounded-[40px] shadow-2xl p-4 border-4 border-gray-900 relative overflow-hidden flex flex-col"
-    >
-      <!-- Phone Notch -->
-      <div class="phone-notch">
-        <div class="phone-speaker"></div>
-      </div>
 
-      <!-- Phone Content-->
-      <div
-        class="bg-gray-100 h-full w-full rounded-[24px] overflow-y-auto flex-grow"
-      >
-        <div class="pt-8 pb-4 px-1">
-          <!-- Header -->
-          <h1 class="text-2xl font-bold text-center text-gray-800 mb-6 px-3">
-            Contacts
-          </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact List - Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <!-- Contact List -->
-          <div
-            class="bg-white rounded-lg shadow-md mx-2 h-[550px] overflow-y-auto"
-          >
-            <ul id="contact-list-ul" class="divide-y divide-gray-200">
-              <!-- Contact List item -->
-              <li class="contact-item">
-                <div
-                  class="contact-item-summary flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50"
-                >
-                  <div class="flex items-center min-w-0">
-                    <!-- Contact Image -->
-                    <img
-                      src="https://randomuser.me/api/portraits/men/41.jpg"
-                      alt="Contact Avatar"
-                      class="contact-avatar w-10 h-10 rounded-full mr-3 flex-shrink-0"
-                      onerror="this.onerror=null; this.dataset.failed='true';"
-                    />
-                    <div class="min-w-0">
-                      <!-- Contact Name -->
-                      <p class="text-md font-semibold text-blue-700 truncate">
-                        Alice Smith
-                      </p>
-                      <!-- Contact Phone -->
-                      <p class="text-sm text-gray-600 truncate">555-5678</p>
-                    </div>
+<body class="flex items-center justify-center min-h-screen p-4 bg-[url('./bg.jpg')] bg-center bg-cover bg-no-repeat">
+  <div
+    class="w-full max-w-sm h-[700px] bg-gray-800 rounded-[40px] shadow-2xl p-4 border-4 border-gray-900 relative overflow-hidden flex flex-col">
+    <!-- Phone Notch -->
+    <div class="phone-notch">
+      <div class="phone-speaker"></div>
+    </div>
+
+    <!-- Phone Content-->
+    <div class="bg-gray-100 h-full w-full rounded-[24px] overflow-y-auto flex-grow">
+      <div class="pt-8 pb-4 px-1">
+        <!-- Header -->
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6 px-3">
+          Contacts
+        </h1>
+
+        <!-- Contact List -->
+        <div class="bg-white rounded-lg shadow-md mx-2 h-[550px] overflow-y-auto">
+          <ul id="contact-list-ul" class="divide-y divide-gray-200">
+            <!-- Contact List item -->
+            <li class="contact-item">
+              <div class="contact-item-summary flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50">
+                <div class="flex items-center min-w-0">
+                  <!-- Contact Image -->
+                  <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Contact Avatar"
+                    class="contact-avatar w-10 h-10 rounded-full mr-3 flex-shrink-0"
+                    onerror="this.onerror=null; this.dataset.failed='true';" />
+                  <div class="min-w-0">
+                    <!-- Contact Name -->
+                    <p class="text-md font-semibold text-blue-700 truncate">
+                      Alice Smith
+                    </p>
+                    <!-- Contact Phone -->
+                    <p class="text-sm text-gray-600 truncate">555-5678</p>
                   </div>
                 </div>
-                <div
-                  class="contact-item-details p-4 border-t border-gray-200 bg-gray-50"
-                >
-                  <p class="text-sm font-medium text-gray-700 mb-1">
-                    Phone:
-                    <span class="font-normal">555-5555</span>
-                  </p>
-                  <p class="text-sm font-medium text-gray-700 mb-1">
-                    Email:
-                    <span class="font-normal">alice.smith@email.com</span>
-                  </p>
-                  <p class="text-sm font-medium text-gray-700 mb-1">
-                    Address:
-                    <span class="font-normal">123 Main St, Anytown</span>
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+              <div class="contact-item-details p-4 border-t border-gray-200 bg-gray-50">
+                <p class="text-sm font-medium text-gray-700 mb-1">
+                  Phone:
+                  <span class="font-normal">555-5555</span>
+                </p>
+                <p class="text-sm font-medium text-gray-700 mb-1">
+                  Email:
+                  <span class="font-normal">alice.smith@email.com</span>
+                </p>
+                <p class="text-sm font-medium text-gray-700 mb-1">
+                  Address:
+                  <span class="font-normal">123 Main St, Anytown</span>
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
